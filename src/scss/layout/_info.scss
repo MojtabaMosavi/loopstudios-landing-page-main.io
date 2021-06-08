@@ -1,0 +1,87 @@
+@use "../abstracts/" as abs;
+/*|| info section */
+.info {
+  padding-top: 6rem;
+
+  &__image-wrapper {
+    display: inline-block;
+    margin-bottom: 2.7rem;
+  }
+  &__image {
+    max-width: 45.74rem;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
+  }
+
+  &__text {
+    padding: 0 1rem;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    font-size: 1.01rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+    color: abs.$Very-Dark-Gray;
+  }
+
+  /*|| tablet view, size=43em */
+
+  @include abs.respond-to("small") {
+    padding-top: 10rem;
+    &__content-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &__image-wrapper {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    &__content {
+      align-self: flex-end;
+      flex: 1;
+    }
+  }
+
+  /*|| labtop view, size=62em */
+  @include abs.respond-to("medium") {
+    &__content-wrapper {
+      position: relative;
+    }
+    &__image-wrapper {
+      flex: 2;
+    }
+
+    &__content {
+      text-align: left;
+      background: transparent;
+      background-color: #fff;
+      position: absolute;
+      /* right: 15%; */
+      max-width: 34rem;
+      padding: 0rem;
+      right: 0;
+      padding: 5.8rem 0 0 6rem;
+    }
+
+    &__heading {
+      margin-bottom: 2rem;
+      font-size: 3rem;
+    }
+
+    &__text {
+      padding: 0;
+    }
+  }
+}

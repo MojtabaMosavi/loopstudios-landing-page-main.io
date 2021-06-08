@@ -1,0 +1,33 @@
+@use "../abstracts" as abs;
+
+/*|| disable scrolling on the page*/
+.no-scroll {
+  overflow-y: hidden;
+}
+
+/*|| aligning and cenering the content*/
+.container {
+  padding: 0 1.45rem;
+
+  /* centering on laptop view, size = 62em */
+  @include abs.respond-to("medium") {
+    max-width: 69.6875rem;
+    margin: 0 auto;
+  }
+
+  /* centering on desktop view, size = 62em */
+  @include abs.respond-to("large") {
+    max-width: 72rem;
+  }
+}
+
+/*|| Hidde the element from sighted user but display it to screen readers*/
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

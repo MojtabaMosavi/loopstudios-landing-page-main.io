@@ -2,7 +2,7 @@
 @use "../base/helpers";
 
 .header {
-  background-image: url("./dist/images/mobile/image-hero.jpg");
+  background-image: url("/dist/images/mobile/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -75,7 +75,7 @@
   /*|| tablet view size = 43em */
 
   @include abs.respond-to("small") {
-    background-image: url("./dist/images/desktop/image-hero.jpg");
+    background-image: url("/dist/images/desktop/image-hero.jpg");
     &__nav-wrapper {
       padding-top: 4rem;
       margin-bottom: 7.8rem;

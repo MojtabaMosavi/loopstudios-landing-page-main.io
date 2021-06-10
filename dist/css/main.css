@@ -7,6 +7,45 @@
 /* to make flex containers */
 /* creates underlines for lins, icon 
     current version has no custom properties*/
+/*|| disable scrolling on the page*/
+.no-scroll {
+  overflow-y: hidden;
+}
+
+/*|| aligning and cenering the content*/
+.container {
+  padding: 0 1.45rem;
+  /* centering on tablet view, size = 62em */
+  /* centering on laptop view, size = 62em */
+  /* centering on desktop view, size = 62em */
+}
+@media only screen and (min-width: 43em) {
+  .container {
+    padding: 0 1.8rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .container {
+    max-width: 69.6875rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 82em) {
+  .container {
+    max-width: 73rem;
+  }
+}
+
+/*|| Hidde the element from sighted user but display it to screen readers*/
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /*|| globla styles */
 html {
   box-sizing: border-box;
@@ -114,47 +153,8 @@ button:focus-visible {
   max-height: 3rem;
 }
 
-/*|| disable scrolling on the page*/
-.no-scroll {
-  overflow-y: hidden;
-}
-
-/*|| aligning and cenering the content*/
-.container {
-  padding: 0 1.45rem;
-  /* centering on tablet view, size = 62em */
-  /* centering on laptop view, size = 62em */
-  /* centering on desktop view, size = 62em */
-}
-@media only screen and (min-width: 43em) {
-  .container {
-    padding: 0 1.8rem;
-  }
-}
-@media only screen and (min-width: 62em) {
-  .container {
-    max-width: 69.6875rem;
-    margin: 0 auto;
-  }
-}
-@media only screen and (min-width: 82em) {
-  .container {
-    max-width: 73rem;
-  }
-}
-
-/*|| Hidde the element from sighted user but display it to screen readers*/
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
 .header {
-  background-image: url("../images/mobile/image-hero.jpg");
+  background-image: url("./dist/images/mobile/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -234,7 +234,7 @@ button:focus-visible {
 }
 @media only screen and (min-width: 43em) {
   .header {
-    background-image: url("../../../dist/images/desktop/image-hero.jpg");
+    background-image: url("./dist/images/desktop/image-hero.jpg");
   }
   .header__nav-wrapper {
     padding-top: 4rem;
@@ -414,31 +414,31 @@ button:focus-visible {
   font-weight: 300;
 }
 .features__card--deep-earth {
-  background-image: url("/dist/images/mobile/image-deep-earth.jpg");
+  background-image: url("./dist/images/mobile/image-deep-earth.jpg");
 }
 .features__card--night-arcade {
-  background-image: url("/dist/images/mobile/image-night-arcade.jpg");
+  background-image: url("./dist/images/mobile/image-night-arcade.jpg");
 }
 .features__card--soccer-team {
-  background-image: url("/dist/images/mobile/image-soccer-team.jpg");
+  background-image: url("./dist/images/mobile/image-soccer-team.jpg");
 }
 .features__card--the-grid {
-  background-image: url("/dist/images/mobile/image-grid.jpg");
+  background-image: url("./dist/images/mobile/image-grid.jpg");
 }
 .features__card--the-grid h3 {
   max-width: 8rem;
 }
 .features__card--from-up-above {
-  background-image: url("/dist/images/mobile/image-from-above.jpg");
+  background-image: url("./dist/images/mobile/image-from-above.jpg");
 }
 .features__card--pocket-borealis {
-  background-image: url("/dist/images/mobile/image-pocket-borealis.jpg");
+  background-image: url("./dist/images/mobile/image-pocket-borealis.jpg");
 }
 .features__card--the-curiosity {
-  background-image: url("/dist/images/mobile/image-curiosity.jpg");
+  background-image: url("./dist/images/mobile/image-curiosity.jpg");
 }
 .features__card--make-it-fisheye {
-  background-image: url("/dist/images/mobile/image-fisheye.jpg");
+  background-image: url("./dist/images/mobile/image-fisheye.jpg");
 }
 @media only screen and (min-width: 43em) {
   .features__content-wrapper {
@@ -513,31 +513,31 @@ button:focus-visible {
     color: black;
   }
   .features__card--deep-earth {
-    background-image: url("../../../dist/images/desktop/image-deep-earth.jpg");
+    background-image: url("./dist/images/desktop/image-deep-earth.jpg");
   }
   .features__card--night-arcade {
-    background-image: url("../../../dist/images/desktop/image-night-arcade.jpg");
+    background-image: url("./dist/images/desktop/image-night-arcade.jpg");
   }
   .features__card--soccer-team {
-    background-image: url("../../../dist/images/desktop/image-soccer-team.jpg");
+    background-image: url("./dist/images/desktop/image-soccer-team.jpg");
   }
   .features__card--the-grid {
-    background-image: url("../../../dist/images/desktop/image-grid.jpg");
+    background-image: url("./dist/images/desktop/image-grid.jpg");
   }
   .features__card--the-grid h3 {
     max-width: 8rem;
   }
   .features__card--from-up-above {
-    background-image: url("../../../dist/images/desktop/image-from-above.jpg");
+    background-image: url("./dist/images/desktop/image-from-above.jpg");
   }
   .features__card--pocket-borealis {
-    background-image: url("../../../dist/images/desktop/image-pocket-borealis.jpg");
+    background-image: url("./dist/images/desktop/image-pocket-borealis.jpg");
   }
   .features__card--the-curiosity {
-    background-image: url("../../../dist/images/desktop/image-curiosity.jpg");
+    background-image: url("./dist/images/desktop/image-curiosity.jpg");
   }
   .features__card--make-it-fisheye {
-    background-image: url("../../../dist/images/desktop/image-fisheye.jpg");
+    background-image: url("./dist/images/desktop/image-fisheye.jpg");
   }
 }
 
@@ -618,16 +618,16 @@ button:focus-visible {
   visibility: visible;
 }
 .footer__icon--facebook {
-  content: url(/dist/images/icon-facebook.svg);
+  content: url(./dist/images/icon-facebook.svg);
 }
 .footer__icon--twitter {
-  content: url(/dist/images/icon-twitter.svg);
+  content: url(./dist/images/icon-twitter.svg);
 }
 .footer__icon--pinterest {
-  content: url(/dist/images/icon-pinterest.svg);
+  content: url(./dist/images/icon-pinterest.svg);
 }
 .footer__icon--instagram {
-  content: url(/dist/images/icon-instagram.svg);
+  content: url(./dist/images/icon-instagram.svg);
 }
 .footer__info {
   padding-bottom: 3.5rem;

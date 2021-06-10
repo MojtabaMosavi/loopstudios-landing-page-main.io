@@ -111,7 +111,8 @@ button:focus-visible {
 }
 
 /* hamburgur menu */
-.hamburger-menu, .hamburger-menu--active {
+.hamburger-menu,
+.hamburger-menu--active {
   width: 1.55rem;
   height: 1.4rem;
   background-color: inherit;
@@ -179,7 +180,8 @@ button:focus-visible {
 .header__hamburger-menu {
   z-index: 2;
 }
-.header__nav, .header__nav--active {
+.header__nav,
+.header__nav--active {
   position: absolute;
   top: 0;
   left: 0;
@@ -246,7 +248,8 @@ button:focus-visible {
   .header__hamburger-menu {
     display: none;
   }
-  .header__nav, .header__nav--active {
+  .header__nav,
+  .header__nav--active {
     all: unset;
   }
   .header__nav-links {
@@ -414,31 +417,31 @@ button:focus-visible {
   font-weight: 300;
 }
 .features__card--deep-earth {
-  background-image: url("./dist/images/mobile/image-deep-earth.jpg");
+  background-image: url("./images/mobile/image-deep-earth.jpg");
 }
 .features__card--night-arcade {
-  background-image: url("./dist/images/mobile/image-night-arcade.jpg");
+  background-image: url("./images/mobile/image-night-arcade.jpg");
 }
 .features__card--soccer-team {
-  background-image: url("./dist/images/mobile/image-soccer-team.jpg");
+  background-image: url("./images/mobile/image-soccer-team.jpg");
 }
 .features__card--the-grid {
-  background-image: url("./dist/images/mobile/image-grid.jpg");
+  background-image: url("./images/mobile/image-grid.jpg");
 }
 .features__card--the-grid h3 {
   max-width: 8rem;
 }
 .features__card--from-up-above {
-  background-image: url("./dist/images/mobile/image-from-above.jpg");
+  background-image: url("./images/mobile/image-from-above.jpg");
 }
 .features__card--pocket-borealis {
-  background-image: url("./dist/images/mobile/image-pocket-borealis.jpg");
+  background-image: url("./images/mobile/image-pocket-borealis.jpg");
 }
 .features__card--the-curiosity {
-  background-image: url("./dist/images/mobile/image-curiosity.jpg");
+  background-image: url("./images/mobile/image-curiosity.jpg");
 }
 .features__card--make-it-fisheye {
-  background-image: url("./dist/images/mobile/image-fisheye.jpg");
+  background-image: url("./images/mobile/image-fisheye.jpg");
 }
 @media only screen and (min-width: 43em) {
   .features__content-wrapper {

@@ -6,3 +6,28 @@
     @content;
   }
 }
+
+/* to make flex containers */
+@mixin flexify($al-con: center, $js-con: space-between, $flex-d: row) {
+  display: flex;
+  align-items: $al-con;
+  justify-content: $js-con;
+  flex-direction: $flex-d;
+}
+
+/* creates underlines for lins, icon 
+    current version has no custom properties*/
+
+@mixin underline() {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.625rem;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: v.$White;
+  transform: scale(0);
+  transition: all 300ms ease-in-out;
+  visibility: hidden;
+}

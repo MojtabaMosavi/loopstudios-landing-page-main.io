@@ -14,24 +14,39 @@ body {
 }
 
 /* focus property removed on hover but showed when element is tabed */
+/* using offset property the outline is positioned away from the element
+    the  second and third rule only apply when :focus-visible is supported
+    source = https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/*/
 a {
   text-decoration: none;
 
   &:focus {
+    outline: max(1, 0.1em) dashed #000;
+    outline-offset: -0.25em;
+  }
+  /* remove the outline when is not tabed*/
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 
   &:focus-visible {
-    outline: initial;
+    outline: max(1, 0.1em) dashed #000;
+    outline-offset: -0.25em;
   }
 }
 
 button {
-  :focus {
+  &:focus {
+    outline: max(1, 0.1em) dashed #000;
+    outline-offset: -0.25em;
+  }
+
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 
   &:focus-visible {
-    outline: initial;
+    outline: max(1, 0.1em) dashed #000;
+    outline-offset: -0.25em;
   }
 }

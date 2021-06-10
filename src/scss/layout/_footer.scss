@@ -1,0 +1,148 @@
+@use "../abstracts/" as abs;
+
+/* footer*/
+
+.footer {
+  background-color: black;
+
+  &__content-wrapper {
+    text-align: center;
+    padding-top: 3.5rem;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 2rem;
+    & > img {
+      max-width: 44%;
+    }
+  }
+
+  &__links {
+    min-height: 11.5rem;
+    @include abs.flexify($js-con: space-between, $flex-d: column);
+    margin-bottom: 3rem;
+  }
+
+  &__link {
+    display: block;
+    color: abs.$White;
+    font-weight: 700;
+    position: relative;
+
+    &::before {
+      @include abs.underline();
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(1);
+        visibility: visible;
+      }
+    }
+  }
+
+  &__social-icons {
+    @include abs.flexify($js-con: space-between);
+    max-width: 9rem;
+    margin: 0 auto 1.1rem auto;
+  }
+
+  &__icon {
+    position: relative;
+
+    &::before {
+      @include abs.underline();
+    }
+    &:hover {
+      &::before {
+        transform: scale(1);
+        visibility: visible;
+      }
+    }
+    &--facebook {
+      content: url(/dist/images/icon-facebook.svg);
+    }
+
+    &--twitter {
+      content: url(/dist/images/icon-twitter.svg);
+    }
+
+    &--pinterest {
+      content: url(/dist/images/icon-pinterest.svg);
+    }
+
+    &--instagram {
+      content: url(/dist/images/icon-instagram.svg);
+    }
+  }
+
+  &__info {
+    padding-bottom: 3.5rem;
+  }
+
+  &__copy-right {
+    color: abs.$Dark-Gray;
+    font-size: 1.04rem;
+    font-weight: 700;
+  }
+
+  /* tablet view, size = 43em */
+  @include abs.respond-to("small") {
+    &__content-wrapper {
+      display: grid;
+      grid-template:
+        "logo icons" auto
+        "nav copy-right" auto / 1fr 1fr;
+      grid-gap: 2rem;
+    }
+
+    &__logo {
+      grid-area: logo;
+      margin-bottom: 0;
+    }
+
+    &__nav {
+      grid-area: nav;
+    }
+
+    &__links {
+      flex-direction: row;
+      min-height: unset;
+      margin-bottom: 0;
+    }
+
+    &__social-icons {
+      grid-area: icons;
+      margin: 0 auto;
+      min-width: 9rem;
+    }
+  }
+
+  /* desktop view, size = 62em */
+
+  @include abs.respond-to("medium") {
+    &__content-wrapper {
+      padding-top: 2.5rem;
+      text-align: left;
+      grid-gap: 1.8rem;
+    }
+    &__nav {
+      max-width: 23.7rem;
+    }
+
+    &__logo {
+      img {
+        width: 27%;
+      }
+    }
+    &__social-icons {
+      justify-self: end;
+      margin: unset;
+    }
+
+    &__info {
+      justify-self: end;
+    }
+  }
+}

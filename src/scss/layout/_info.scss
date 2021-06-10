@@ -39,8 +39,7 @@
   @include abs.respond-to("small") {
     padding-top: 10rem;
     &__content-wrapper {
-      display: flex;
-      align-items: center;
+      @include abs.flexify($js-con: none);
     }
 
     &__image-wrapper {

@@ -2,6 +2,7 @@
 
 /*|| features*/
 .features {
+  margin-bottom: 6rem;
   &__content-wrapper {
     display: grid;
     grid-template:
@@ -34,6 +35,10 @@
     min-height: 7.6rem;
     cursor: pointer;
     background: no-repeat center center / cover;
+
+    &-overlay {
+      display: none;
+    }
 
     &-heading {
       text-transform: uppercase;
@@ -104,12 +109,15 @@
   /* laptop view, size = 62em */
 
   @include abs.respond-to("medium") {
+    margin-bottom: 9.12rem;
     &__heading {
       font-size: 3rem;
       margin-bottom: 5rem;
     }
 
     &__btn {
+      margin-top: 0.5rem;
+      max-height: 2.5rem;
       &:hover {
         background-color: abs.$Black;
         color: abs.$White;

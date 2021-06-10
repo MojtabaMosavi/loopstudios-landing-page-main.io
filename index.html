@@ -13,8 +13,8 @@
 <body>
   <header class="header">
     <div class="header__nav-wrapper container">
-      <a href="/" class="header__logo">
-        <img src="./dist/images/logo.svg" alt="">
+      <a href="/" class="header__logo" aria-label="logo of the site" title="logo">
+        <img src="./dist/images/logo.svg" alt="" aria-hidden="true">
       </a>
       
       <button class="hamburger-menu header__hamburger-menu" aria-label="menu" type="button"
@@ -44,19 +44,20 @@
   
   <main class="main container">
     <section class="info">
+
       <div class="info__content-wrapper">
         <picture class="info__image-wrapper">
           <source srcset="dist/images/mobile/image-interactive.jpg" media="(max-width: 43em)")>
           <source srcset="dist/images/desktop/image-interactive.jpg" media="(max-width: 62em)")>
           <img class="info__image" src="./dist/images/desktop/image-interactive.jpg" alt="A person with vr-glases on">
         </picture>
+
         <article class="info__content">
           <h2 class="info__heading">  The leader in interactive VR</h2>
           <p class="info__text">  Founded in 2011, Loopstudios has been producing world-class virtual reality 
             projects for some of the best companies around the globe. Our award-winning 
             creations have transformed businesses through digital experiences that bind 
             to their brand.</p>
-
         </article>
       </div>
     </section><!-- End of information-->
@@ -65,66 +66,66 @@
       <div class="features__content-wrapper">
         <h2 class="features__heading">  Our creations</h2>
 
-        <button class="features__btn btn btn--s">  See all</button>
+        <button class="features__btn btn btn--s" type="button" title="see all products">  See all</button>
 
         <div class="features__cards">
-          <a href="#" class="features__card features__card--deep-earth">
-            <div class="features__card-overlay">
+          <a href="#" class="features__card features__card--deep-earth" aria-label="products" title="products">
+            <div class="features__card-overlay" aria-hidden="true" aria-lablel="read more">
               <span>read more</span>
             </div>
             <h3 class="features__card-heading">deep earth</h3>
           </a>
 
-          <a href="#" class="features__card features__card--night-arcade">
-            <div class="features__card-overlay">
+          <a href="#" class="features__card features__card--night-arcade" aria-label="products" title="products">
+            <div class="features__card-overlay" aria-hidden="true" aria-lablel="read more">
               <span>read more</span>
 
             </div>
             <h3 class="features__card-heading">Night arcade</h3>
           </a>
 
-          <a href="#" class="features__card features__card--soccer-team">
-            <div class="features__card-overlay">
+          <a href="#" class="features__card features__card--soccer-team" aria-label="products" title="products">
+            <div class="features__card-overlay" aria-hidden="true" aria-lablel="read more">
               <span>read more</span>
 
             </div>
             <h3 class="features__card-heading">  Soccer team VR</h3>
           </a>
 
-          <a href="#" class="features__card features__card--the-grid">
-            <div class="features__card-overlay">
+          <a href="#" class="features__card features__card--the-grid" aria-label="products" title="products">
+            <div class="features__card-overlay" aria-hidden="true" aria-lablel="read more">
               <span>read more</span>
 
             </div>
             <h3 class="features__card-heading">  The grid</h3>
           </a>
 
-          <a href="#" class="features__card features__card--from-up-above">
-            <div class="features__card-overlay">
+          <a href="#" class="features__card features__card--from-up-above" aria-label="products" title="products">
+            <div class="features__card-overlay" aria-hidden="true" aria-lablel="read more">
               <span>read more</span>
 
             </div>
             <h3 class="features__card-heading">  From up above VR</h3>
           </a>
 
-          <a href="#" class="features__card features__card--pocket-borealis">
-            <div class="features__card-overlay">
+          <a href="#" class="features__card features__card--pocket-borealis" aria-label="products" title="products">
+            <div class="features__card-overlay" aria-hidden="true" aria-lablel="read more">
               <span>read more</span>
 
             </div>
             <h3 class="features__card-heading">  Pocket borealis</h3>
           </a>
 
-          <a href="#" class="features__card features__card--the-curiosity">
-            <div class="features__card-overlay">
+          <a href="#" class="features__card features__card--the-curiosity" aria-label="products" title="products">
+            <div class="features__card-overlay" aria-hidden="true" aria-lablel="read more">
               <span>read more</span>
 
             </div>
             <h3 class="features__card-heading">  The curiosity</h3>
           </a>
 
-        <a href="#" class="features__card features__card--make-it-fisheye">
-          <div class="features__card-overlay">
+        <a href="#" class="features__card features__card--make-it-fisheye" aria-label="products" title="products">
+          <div class="features__card-overlay" aria-hidden="true" aria-lablel="read more">
             <span>read more</span>
 
           </div>
@@ -133,21 +134,55 @@
       </div>
     </div>
     </section><!-- End of features-->
-  </main>
-  <!--
+  </main><!-- End of main-->
 
-  About
-  Careers
-  Events
-  Products
-  Support
+  <footer class="footer">
+    <div class="footer__content-wrapper container">
 
-  © 2021 Loopstudios. All rights reserved.
+      <a href="#" class="footer__logo" aria-label="logo of the site" title="logo">
+        <img src="/dist/images/logo.svg" alt="" aria-hidden="true">
+      </a>
+      <nav class="footer__nav">
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">  About</a></li>
+          <li><a href="#" class="footer__link">  Careers</a></li>
+          <li><a href="#" class="footer__link">  Events</a></li>
+          <li><a href="#" class="footer__link">Products</a></li>
+          <li><a href="#" class="footer__link">Support</a></li>
+        </ul>
+      </nav><!--End of nav-->
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-   -->
+      <ul class="footer__social-icons">
+        <li>
+          <!-- Title shows a tooltip for sighted users, aria-lablel provids a text alternative for screen readers-->
+          <a href="#" class="footer__icon " title="loopstudios on facebook" arial-label="loopstudios on facebook">
+          <i class="footer__icon--facebook" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer__icon " title="loopstudios on twitter" aria-label="loopstudios on twitter">
+          <i class="footer__icon--twitter" aria-hidden="true"></i>
+
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer__icon " title="loopstudios on pinterest" aria-label="loopstudios on painterest">
+          <i class="footer__icon--pinterest" aria-hidden="true"></i>
+
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer__icon " title="loopstudios on instagram" aria-label="loopstudios on instagram">
+          <i class="footer__icon--instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul><!--End of icons-->
+
+      <div class="footer__info">
+        <p class="footer__copy-right">  &copy; 2021 Loopstudios. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer><!--End of footer-->
 </body>
 </html>

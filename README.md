@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://mojtabamosavi.github.io/loopstudios-landing-page-main.io/)
 
 ## My process
 
@@ -89,26 +89,6 @@ Users should be able to:
           </a>
 
 ```
-
-
-
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-
 
 ### Continued development
 

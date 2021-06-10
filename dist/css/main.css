@@ -111,8 +111,7 @@ button:focus-visible {
 }
 
 /* hamburgur menu */
-.hamburger-menu,
-.hamburger-menu--active {
+.hamburger-menu, .hamburger-menu--active {
   width: 1.55rem;
   height: 1.4rem;
   background-color: inherit;
@@ -180,8 +179,7 @@ button:focus-visible {
 .header__hamburger-menu {
   z-index: 2;
 }
-.header__nav,
-.header__nav--active {
+.header__nav, .header__nav--active {
   position: absolute;
   top: 0;
   left: 0;
@@ -248,8 +246,7 @@ button:focus-visible {
   .header__hamburger-menu {
     display: none;
   }
-  .header__nav,
-  .header__nav--active {
+  .header__nav, .header__nav--active {
     all: unset;
   }
   .header__nav-links {

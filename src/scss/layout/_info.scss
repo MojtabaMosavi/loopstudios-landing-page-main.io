@@ -1,7 +1,7 @@
 @use "../abstracts/" as abs;
 /*|| info section */
 .info {
-  padding-top: 6rem;
+  margin: 6rem 0;
 
   &__image-wrapper {
     display: inline-block;
@@ -56,6 +56,9 @@
 
   /*|| labtop view, size=62em */
   @include abs.respond-to("medium") {
+    margin-top: 0;
+    margin-bottom: 11rem;
+
     &__content-wrapper {
       position: relative;
     }

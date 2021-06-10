@@ -1,0 +1,204 @@
+@use "../abstracts/" as abs;
+
+/*|| features*/
+.features {
+  &__content-wrapper {
+    display: grid;
+    grid-template:
+      "heading" auto
+      "features" auto
+      "btn" auto/1fr;
+  }
+
+  &__heading {
+    text-align: center;
+    font-family: 300;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__btn {
+    grid-area: btn;
+    justify-self: center;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template: 61fr/1fr;
+    gap: 1.4rem 0;
+    margin-bottom: 2rem;
+  }
+
+  &__card {
+    min-height: 7.6rem;
+    cursor: pointer;
+    background: no-repeat center center / cover;
+
+    &-heading {
+      text-transform: uppercase;
+      padding: 0 0 0 1.2rem;
+      color: abs.$White;
+      margin-top: 3.2rem;
+      max-width: 10rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    /* modifiers for background images*/
+    &--deep-earth {
+      background-image: url("/dist/images/mobile/image-deep-earth.jpg");
+    }
+
+    &--night-arcade {
+      background-image: url("/dist/images/mobile/image-night-arcade.jpg");
+    }
+
+    &--soccer-team {
+      background-image: url("/dist/images/mobile/image-soccer-team.jpg");
+    }
+
+    &--the-grid {
+      background-image: url("/dist/images/mobile/image-grid.jpg");
+
+      h3 {
+        max-width: 8rem;
+      }
+    }
+
+    &--from-up-above {
+      background-image: url("/dist/images/mobile/image-from-above.jpg");
+    }
+
+    &--pocket-borealis {
+      background-image: url("/dist/images/mobile/image-pocket-borealis.jpg");
+    }
+
+    &--the-curiosity {
+      background-image: url("/dist/images/mobile/image-curiosity.jpg");
+    }
+
+    &--make-it-fisheye {
+      background-image: url("/dist/images/mobile/image-fisheye.jpg");
+    }
+  }
+
+  /* tablet view, size = 43em */
+  @include abs.respond-to("small") {
+    &__content-wrapper {
+      grid-template:
+        "heading btn" auto
+        "features features" auto/1fr;
+    }
+
+    &__heading {
+      text-align: left;
+    }
+
+    &__cards {
+      grid-template: auto / repeat(2, 1fr);
+      grid-gap: 2rem;
+      grid-area: features;
+    }
+  }
+
+  /* laptop view, size = 62em */
+
+  @include abs.respond-to("medium") {
+    &__heading {
+      font-size: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    &__btn {
+      &:hover {
+        background-color: abs.$Black;
+        color: abs.$White;
+      }
+    }
+
+    &__cards {
+      grid-template: auto / repeat(4, 1fr);
+    }
+
+    &__card {
+      min-height: 28.35rem;
+
+      &-overlay {
+        width: 100%;
+        height: 100%;
+        background-color: abs.$White;
+        opacity: 0;
+        transition: opacity 400ms ease-in-out;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        span {
+          display: inline-block;
+          font-size: 1rem;
+          text-transform: uppercase;
+          padding: 1rem 3rem;
+          border: 2px solid abs.$Black;
+          color: abs.$Black;
+          transition: all 0.5s ease-in-out;
+
+          .features__card:hover & {
+            background-color: abs.$Black;
+            color: abs.$White;
+          }
+        }
+
+        .features__card:hover & {
+          opacity: 0.8;
+        }
+      }
+
+      &-heading {
+        padding: 0 0 0 2.5rem;
+        margin-top: -6rem;
+        max-width: 14rem;
+        font-size: 2rem;
+        position: relative;
+        .features__card:hover & {
+          color: abs.$Black;
+        }
+      }
+
+      /* modifiers for background images*/
+      &--deep-earth {
+        background-image: url("../../../dist/images/desktop/image-deep-earth.jpg");
+      }
+
+      &--night-arcade {
+        background-image: url("../../../dist/images/desktop/image-night-arcade.jpg");
+      }
+
+      &--soccer-team {
+        background-image: url("../../../dist/images/desktop/image-soccer-team.jpg");
+      }
+
+      &--the-grid {
+        background-image: url("../../../dist/images/desktop/image-grid.jpg");
+
+        h3 {
+          max-width: 8rem;
+        }
+      }
+
+      &--from-up-above {
+        background-image: url("../../../dist/images/desktop/image-from-above.jpg");
+      }
+
+      &--pocket-borealis {
+        background-image: url("../../../dist/images/desktop/image-pocket-borealis.jpg");
+      }
+
+      &--the-curiosity {
+        background-image: url("../../../dist/images/desktop/image-curiosity.jpg");
+      }
+
+      &--make-it-fisheye {
+        background-image: url("../../../dist/images/desktop/image-fisheye.jpg");
+      }
+    }
+  }
+}

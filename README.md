@@ -90,12 +90,14 @@ Users should be able to:
 
 ```
 
+5- How make my code more dyr trough use of mixins. For example the underline for each interactive element in the site comes form mixin withe reduces the make the code more dry.
+
 ### Continued development
 
 1- Advancing my knowledge of accessiblity.
 2- Deepen my knowledge about the proper usage of BEM 
 3- Try out a bit more complex projects which involve other technologies such as react.
-4-  
+4- Get familiar with more advanced features of sass.
 
 ### Useful resources
 
